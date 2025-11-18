@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CounterScreen extends StatelessWidget {
@@ -6,26 +5,22 @@ class CounterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold (
-      appBar: AppBar(
-        title: const Text('Counter Screen'),
-        centerTitle: true,
-      ),
-        body: const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('10', style: TextStyle(fontSize: 160, fontWeight: FontWeight.w100)),
-              Text('Clicks', style: TextStyle(fontSize: 25))
-            ],
-          ),
+    return Scaffold(
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('10', style: TextStyle(fontSize: 100, fontWeight: FontWeight.w100),),
+            Text('Clicks', style: TextStyle(fontSize: 25),)
+          ],
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
 
-          },
-          child: const Icon(Icons.plus_one),
-          ),
-      );
+        },
+        child: Icon(Icons.plus_one),
+        ),
+    );
   }
 }
